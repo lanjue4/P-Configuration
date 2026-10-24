@@ -2,9 +2,16 @@
 // Surge — TestFlight 空位监控
 // 配套模块：TF-Monitor.sgmodule
 //
-// 常用参数在模块编辑界面修改。
-// 请从模块生成的任务运行。
+// 功能：
+// 1. 自动获取应用名称
+// 2. 通知显示应用名和完整邀请链接
+// 3. 点击通知打开对应 TestFlight 邀请
+// 4. 去重、测试通知、一次性重置记录
+// 5. 支持监控时间段
+//
+// 常用参数在模块参数界面修改。
 // ==========================================
+
 
 // ---------- 读取模块参数 ----------
 
@@ -45,6 +52,7 @@ function getHour(name, fallback) {
     return Number(value);
 }
 
+
 // ---------- 持久化记录 ----------
 
 function stateKey(id) {
@@ -55,19 +63,91 @@ function resetKey(id) {
     return `tf-monitor-reset-token-${id}`;
 }
 
-// ---------- 页面解析 ----------
+function nameKey(id) {
+    return `tf-monitor-name-${id}`;
+}
+
+
+// ---------- 文字处理 ----------
 
 function decode(text) {
-    return text
+    return String(text)
         .replace(/&amp;/gi, "&")
         .replace(/&#(?:0*39|x0*27);|&apos;/gi, "'")
         .replace(/&quot;/gi, '"')
-        .replace(/&nbsp;/gi, " ");
+        .replace(/&nbsp;/gi, " ")
+        .replace(/&#(\d+);/g, (match, value) => {
+            const code = Number(value);
+
+            return code >= 0 && code <= 0x10FFFF
+                ? String.fromCodePoint(code)
+                : match;
+        })
+        .replace(/&#x([0-9a-f]+);/gi, (match, value) => {
+            const code = parseInt(value, 16);
+
+            return code >= 0 && code <= 0x10FFFF
+                ? String.fromCodePoint(code)
+                : match;
+        });
 }
 
+function cleanText(text) {
+    return decode(
+        decode(String(text).replace(/<[^>]*>/g, " "))
+    ).replace(/\s+/g, " ").trim();
+}
+
+
+// ---------- 获取应用名称 ----------
+
+function resolveName(html, id) {
+    const titleMatch = html.match(
+        /<title\b[^>]*>([\s\S]*?)<\/title>/i
+    );
+
+    const title = cleanText(
+        titleMatch ? titleMatch[1] : ""
+    );
+
+    const titleName = title.match(
+        /^Join the (.+?) beta\s*[-–—]/i
+    );
+
+    const statusMatch = html.match(
+        /<div\b[^>]*class=["'][^"']*\bbeta-status\b[^"']*["'][^>]*>[\s\S]*?<span\b[^>]*>([\s\S]*?)<\/span>/i
+    );
+
+    const statusText = statusMatch
+        ? cleanText(statusMatch[1])
+        : "";
+
+    const statusName = statusText.match(
+        /^To join (?:the )?(.+?) beta, open the link/i
+    );
+
+    let name = "";
+
+    if (titleName) {
+        name = titleName[1].trim();
+    } else if (statusName) {
+        name = statusName[1].trim();
+    }
+
+    if (name) {
+        $persistentStore.write(name, nameKey(id));
+    }
+
+    return name ||
+        $persistentStore.read(nameKey(id)) ||
+        `未获取名称（${id}）`;
+}
+
+
+// ---------- 识别邀请状态 ----------
+
 function classify(html, id) {
-    // 只提取邀请状态区里的提示。
-    // 不使用网页底部的通用帮助内容判断状态。
+    // 只读取邀请状态区，避免匹配通用帮助内容。
     const match = html.match(
         /<div\b[^>]*class=["'][^"']*\bbeta-status\b[^"']*["'][^>]*>[\s\S]*?<span\b[^>]*>([\s\S]*?)<\/span>/i
     );
@@ -79,9 +159,7 @@ function classify(html, id) {
         };
     }
 
-    const text = decode(
-        decode(match[1].replace(/<[^>]*>/g, " "))
-    ).replace(/\s+/g, " ").trim();
+    const text = cleanText(match[1]);
 
     const steps = html.match(
         /var\s+showSteps\s*=\s*(true|false)\b/
@@ -120,17 +198,27 @@ function classify(html, id) {
     return { state, text };
 }
 
+
 // ---------- 发送通知 ----------
 
-function notify(id, test, sound) {
+function notify(id, test, sound, name) {
+    const link =
+        `https://testflight.apple.com/join/${id}`;
+
     $notification.post(
         test
             ? "TestFlight 跳转测试"
             : "🚀 TestFlight 邀请已开放",
-        `邀请码：${id}`,
-        test
-            ? "仅测试通知跳转，不代表有空位。点击打开邀请。"
-            : "点击前往 TestFlight，手动接受加入。",
+
+        name || `未获取名称（${id}）`,
+
+        `${link}\n` +
+        (
+            test
+                ? "测试通知，不代表有空位。点击打开邀请。"
+                : "点击打开 TestFlight，手动接受加入。"
+        ),
+
         {
             action: "open-url",
             url: `itms-beta://testflight.apple.com/join/${id}`,
@@ -139,19 +227,24 @@ function notify(id, test, sound) {
     );
 }
 
+
 // ---------- 请求邀请页面 ----------
 
 function getPage(id) {
     return new Promise((resolve, reject) => {
         $httpClient.get(
             {
-                url: `https://testflight.apple.com/join/${id}`,
+                url:
+                    `https://testflight.apple.com/join/${id}`,
+
                 timeout: 15,
+
                 headers: {
                     "Accept-Language": "en-US",
                     "Cache-Control": "no-cache"
                 }
             },
+
             (error, response, body) => {
                 if (error) {
                     reject(new Error(String(error)));
@@ -178,11 +271,13 @@ function getPage(id) {
     });
 }
 
+
 // ---------- 检查单个邀请 ----------
 
 async function check(id, dedup, sound) {
     try {
         const html = await getPage(id);
+        const name = resolveName(html, id);
         const result = classify(html, id);
 
         const labels = {
@@ -194,11 +289,21 @@ async function check(id, dedup, sound) {
         };
 
         console.log(
-            `[${id}] ${labels[result.state]}：${result.text}`
+            `[${name}] ${labels[result.state]}`
         );
 
-        // 页面不明时，不通知、不覆盖历史记录。
-        if (result.state === "unknown") return;
+        console.log(
+            `邀请链接：https://testflight.apple.com/join/${id}`
+        );
+
+        console.log(
+            `页面提示：${result.text}`
+        );
+
+        // 未知页面不通知，也不覆盖历史记录。
+        if (result.state === "unknown") {
+            return;
+        }
 
         const previous = $persistentStore.read(
             stateKey(id)
@@ -206,16 +311,19 @@ async function check(id, dedup, sound) {
 
         if (result.state === "open") {
             if (!dedup || previous !== "open") {
-                notify(id, false, sound);
-                console.log(`[${id}] 已调用开放通知`);
+                notify(id, false, sound, name);
+
+                console.log(
+                    `[${name}] 已调用开放通知`
+                );
             } else {
                 console.log(
-                    `[${id}] 持续开放，去重不重复通知`
+                    `[${name}] 持续开放，去重不重复通知`
                 );
             }
         } else {
             console.log(
-                `[${id}] 当前不可加入，等待后续开放`
+                `[${name}] 当前不可加入，等待后续开放`
             );
         }
 
@@ -226,7 +334,7 @@ async function check(id, dedup, sound) {
 
         if (!saved) {
             console.log(
-                `[${id}] 保存状态失败，下次可能重复通知`
+                `[${name}] 保存状态失败，下次可能重复通知`
             );
         }
     } catch (error) {
@@ -234,9 +342,10 @@ async function check(id, dedup, sound) {
             `[${id}] 检查失败：${String(error)}`
         );
 
-        // 网络错误不会清除原来的去重记录。
+        // 网络错误不会清除原有去重记录。
     }
 }
+
 
 // ---------- 主流程 ----------
 
@@ -273,17 +382,36 @@ async function check(id, dedup, sound) {
         const start = getHour("start", 0);
         const end = getHour("end", 23);
 
-        // 测试模式：只通知，不检查、不重置。
-        // 不受监控时间段限制。
+        // 测试模式：
+        // 尝试获取第一个应用的名称，然后直接发通知。
+        // 不检查空位、不重置、不受监控时段限制。
         if (test) {
-            notify(ids[0], true, sound);
+            const id = ids[0];
+
+            let name = $persistentStore.read(
+                nameKey(id)
+            );
+
+            try {
+                const html = await getPage(id);
+                name = resolveName(html, id);
+            } catch (error) {
+                console.log(
+                    `获取名称失败，使用缓存：${String(error)}`
+                );
+            }
+
+            notify(id, true, sound, name);
+
             console.log(
                 "已调用测试通知，请点击验证跳转"
             );
+
             return;
         }
 
-        // 重置编号：0表示不清除。
+        // 重置编号：
+        // 0表示不清除，相同编号只处理一次。
         const token = params.reset || "0";
 
         if (!/^[A-Za-z0-9_-]{1,32}$/.test(token)) {
@@ -293,19 +421,19 @@ async function check(id, dedup, sound) {
             );
         }
 
-        // 每个邀请码分别记录编号。
-        // 编号不变时，不会再次重置。
         for (const id of ids) {
             const marker = resetKey(id);
+
             const previousToken =
                 $persistentStore.read(marker);
 
             if (previousToken !== token) {
                 if (token !== "0") {
-                    const cleared = $persistentStore.write(
-                        null,
-                        stateKey(id)
-                    );
+                    const cleared =
+                        $persistentStore.write(
+                            null,
+                            stateKey(id)
+                        );
 
                     if (!cleared) {
                         throw new Error(
@@ -333,7 +461,8 @@ async function check(id, dedup, sound) {
             }
         }
 
-        // 时间段判断：包含结束小时，支持跨午夜。
+        // 时间段判断：
+        // 包含结束小时，支持跨午夜。
         const hour = new Date().getHours();
 
         const allowed = start <= end
@@ -357,6 +486,7 @@ async function check(id, dedup, sound) {
         }
 
         console.log("本次检查完成");
+
     } catch (error) {
         console.log(
             `配置或运行错误：${String(error)}`
