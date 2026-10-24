@@ -1,0 +1,7 @@
+#!name=TestFlight 空位监控
+#!desc=监控 TestFlight 公共邀请，发现开放时通知，点击前往 TestFlight。无需 MITM，不自动加入测试。
+#!arguments=APP_IDS:VCIvwk2g,MINUTES:10,START_HOUR:0,END_HOUR:23,TEST:false,DEDUP:true,SOUND:true,RESET_TOKEN:0
+#!arguments-desc=【监控设置】\nAPP_IDS：8位邀请码，多个用 | 分隔，最多10个。\nMINUTES：检查间隔，1–59分钟，默认10。\nSTART_HOUR：开始小时，0–23。\nEND_HOUR：结束小时，0–23，包含该小时。\n全天设为0至23，也支持跨午夜。\n\n【通知设置】\nTEST：true测试通知；false正常监控。\nDEDUP：true去重；false每次开放都提醒。\nSOUND：true有声；false无声。\n\n【重置记录】\nRESET_TOKEN：默认0，需要重置时改为1，下次改为2。\n每次更换编号只重置一次，无需改回。\n\n【日常使用】\nTEST保持false，DEDUP保持true。\n测试通知后，将TEST改回false。\n停用旧监控任务，避免重复通知。
+
+[Script]
+TF-Monitor-Module = type=cron,cronexp="*/{{{MINUTES}}} * * * *",wake-system=true,timeout=60,script-path=../Scripts/tf-monitor-module.js,argument="ids={{{APP_IDS}}}&start={{{START_HOUR}}}&end={{{END_HOUR}}}&test={{{TEST}}}&dedup={{{DEDUP}}}&sound={{{SOUND}}}&reset={{{RESET_TOKEN}}}"
