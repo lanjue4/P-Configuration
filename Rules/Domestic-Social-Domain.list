@@ -1,0 +1,34 @@
+# ======== 小红书 (API) ========
+DOMAIN-SUFFIX,xiaohongshu.com
+DOMAIN-KEYWORD,xiaohongshu
+
+# ======== 微博 (仅 API) ========
+DOMAIN-SUFFIX,weibo.cn
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-KEYWORD,weibo
+
+# ======== 知乎 ========
+DOMAIN-SUFFIX,zhihu.com
+
+# ======== 百度贴吧 / 微信接口 ========
+DOMAIN,tieba.baidu.com
+DOMAIN,tbmsg.baidu.com
+DOMAIN,tb5.bdstatic.com
+DOMAIN,fclog.baidu.com
+DOMAIN,gsp0.baidu.com
+DOMAIN,hm.baidu.com
+DOMAIN,www.baidu.com
+DOMAIN,tiebac.baidu.com
+DOMAIN,httpsdns.baidu.com
+DOMAIN,c.tieba.baidu.com
+DOMAIN,httpdns.baidu.com
+DOMAIN,httpdns.baidubce.com
+DOMAIN,szshort.weixin.qq.com
+DOMAIN,szextshort.weixin.qq.com
+DOMAIN,szminorshort.weixin.qq.com
+DOMAIN,mp.weixin.qq.com
+
+# ======== Bilibili API (不含图片CDN) ========
+DOMAIN-SUFFIX,biliapi.net
+DOMAIN-SUFFIX,biliapi.com
+DOMAIN-SUFFIX,bilibili.com
