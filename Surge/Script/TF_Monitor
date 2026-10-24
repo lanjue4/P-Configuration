@@ -1,0 +1,247 @@
+// ==========================================
+// Surge — TestFlight 监控
+// 支持：通知跳转、去重、清除记录
+// ==========================================
+
+// 【1】监控列表
+// 填邀请链接最后的 8 位邀请码
+// 多个邀请码用英文逗号分隔
+const appIDs = [
+    "填邀请链接最后的 8 位邀请码"
+];
+
+// 【2】通知跳转测试
+// true：只发测试通知，不检查名额
+// false：正常监控
+const TEST_NOTIFICATION = false;
+
+// 【3】清除去重记录
+// true：清除记录，然后重新检查
+// 运行一次后务必改回 false
+const RESET_HISTORY = false;
+
+
+// ==========================================
+// 以下代码通常不需要修改
+// ==========================================
+
+function storageKey(id) {
+    return `tf-monitor-state-${id}`;
+}
+
+function notify(id, test = false) {
+    $notification.post(
+        test
+            ? "TestFlight 跳转测试"
+            : "🚀 TestFlight 邀请已开放",
+        `邀请码：${id}`,
+        test
+            ? "仅测试通知跳转，不代表有空位。点击打开邀请。"
+            : "点击打开邀请，在 TestFlight 中手动接受加入。",
+        {
+            action: "open-url",
+            url: `itms-beta://testflight.apple.com/join/${id}`,
+            sound: true
+        }
+    );
+}
+
+function getPage(id) {
+    return new Promise((resolve, reject) => {
+        $httpClient.get(
+            {
+                url: `https://testflight.apple.com/join/${id}`,
+                timeout: 15,
+                headers: {
+                    "Accept-Language": "en-US",
+                    "Cache-Control": "no-cache",
+                    "User-Agent":
+                        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) " +
+                        "AppleWebKit/605.1.15 Version/16.0 Safari/605.1.15"
+                }
+            },
+            (error, response, data) => {
+                if (error) {
+                    reject(new Error(String(error)));
+                    return;
+                }
+
+                if (!response || Number(response.status) !== 200) {
+                    reject(new Error(
+                        `HTTP ${response ? response.status : "无响应"}`
+                    ));
+                    return;
+                }
+
+                resolve(String(data || ""));
+            }
+        );
+    });
+}
+
+function decode(text) {
+    return text
+        .replace(/&amp;/gi, "&")
+        .replace(/&#(?:0*39|x0*27);|&apos;/gi, "'")
+        .replace(/&quot;/gi, '"')
+        .replace(/&nbsp;/gi, " ");
+}
+
+async function checkStatus(id) {
+    try {
+        const html = await getPage(id);
+
+        // 仅提取邀请状态区，避免匹配通用帮助内容
+        const match = html.match(
+            /<div\b[^>]*class=["'][^"']*\bbeta-status\b[^"']*["'][^>]*>[\s\S]*?<span\b[^>]*>([\s\S]*?)<\/span>/i
+        );
+
+        if (!match) {
+            console.log(`[${id}] 未找到状态区，不通知。`);
+            return;
+        }
+
+        const text = decode(decode(match[1]))
+            .replace(/<[^>]*>/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        const steps = html.match(
+            /var\s+showSteps\s*=\s*(true|false)\b/
+        );
+
+        const full =
+            /This beta is full|已满|已滿/i.test(text);
+
+        const closed =
+            /isn't accepting any new testers|不再接受|不接受|暫不|暂不/i
+                .test(text);
+
+        const hasInvite = html.includes(
+            `itms-beta://testflight.apple.com/join/${id}`
+        );
+
+        let state = "unknown";
+
+        if (steps && steps[1] === "false") {
+            state = full
+                ? "full"
+                : closed
+                    ? "closed"
+                    : "unavailable";
+        } else if (
+            steps &&
+            steps[1] === "true" &&
+            text &&
+            hasInvite &&
+            !full &&
+            !closed
+        ) {
+            state = "open";
+        }
+
+        const labels = {
+            open: "可加入",
+            full: "名额已满",
+            closed: "暂停招募",
+            unavailable: "当前不可加入",
+            unknown: "状态未知"
+        };
+
+        console.log(`[${id}] ${labels[state]}：${text}`);
+
+        // 未知页面不通知，也不覆盖历史状态
+        if (state === "unknown") return;
+
+        const key = storageKey(id);
+        const previous = $persistentStore.read(key);
+
+        if (state === "open") {
+            if (previous !== "open") {
+                notify(id);
+                console.log(`[${id}] 已调用开放通知。`);
+            } else {
+                console.log(
+                    `[${id}] 持续开放，去重不重复通知。`
+                );
+            }
+        } else {
+            console.log(
+                `[${id}] 当前不可加入，等待下次开放。`
+            );
+        }
+
+        if (!$persistentStore.write(state, key)) {
+            console.log(
+                `[${id}] 保存状态失败，后续可能重复通知。`
+            );
+        }
+    } catch (error) {
+        console.log(
+            `[${id}] 检查失败：${error.message || String(error)}`
+        );
+
+        // 网络错误不重置历史状态
+    }
+}
+
+(async () => {
+    try {
+        const ids = [...new Set(
+            appIDs.map(id => String(id).trim()).filter(Boolean)
+        )];
+
+        if (ids.length === 0) {
+            console.log("请先在 appIDs 中添加邀请码。");
+            return;
+        }
+
+        if (ids.some(id => !/^[A-Za-z0-9]{8}$/.test(id))) {
+            console.log(
+                "邀请码格式错误：请只填链接最后的 8 位字母或数字。"
+            );
+            return;
+        }
+
+        // 测试模式不检查名额，也不清除记录
+        if (TEST_NOTIFICATION) {
+            notify(ids[0], true);
+            console.log(
+                "已调用测试通知，请点击通知验证跳转。"
+            );
+            return;
+        }
+
+        if (RESET_HISTORY) {
+            for (const id of ids) {
+                const key = storageKey(id);
+
+                if ($persistentStore.read(key) === null) {
+                    console.log(`[${id}] 没有历史记录。`);
+                    continue;
+                }
+
+                const ok = $persistentStore.write(null, key);
+
+                console.log(
+                    `[${id}] 清除记录：${ok ? "成功" : "失败"}`
+                );
+            }
+
+            console.log(
+                "本次重新检查；运行后请将 RESET_HISTORY 改回 false。"
+            );
+        }
+
+        // 分批检查，避免大量邀请码同时发起请求
+        for (let i = 0; i < ids.length; i += 5) {
+            await Promise.all(
+                ids.slice(i, i + 5).map(checkStatus)
+            );
+        }
+    } catch (error) {
+        console.log(`运行失败：${String(error)}`);
+    } finally {
+        $done();
+    }
+})();
