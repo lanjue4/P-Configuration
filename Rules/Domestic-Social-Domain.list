@@ -32,3 +32,9 @@ DOMAIN,mp.weixin.qq.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,bilibili.com
+
+# ======== 抖音接口（决定 IP 属地）========
+DOMAIN,aweme.snssdk.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,douyin.com
+
