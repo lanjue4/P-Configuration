@@ -1,7 +1,6 @@
 # ======== 小红书 (API) ========
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-KEYWORD,xiaohongshu
-DOMAIN-SUFFIX,xhscdn.com
 
 # ======== 微博 (仅 API) ========
 DOMAIN-SUFFIX,weibo.cn
