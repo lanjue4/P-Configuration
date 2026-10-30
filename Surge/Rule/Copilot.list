@@ -1,0 +1,19 @@
+# Microsoft-Copilot: 18
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,bingimages.microsoft.com
+DOMAIN-SUFFIX,ai.microsoft.com
+DOMAIN-SUFFIX,cdn.openai.com
+DOMAIN-SUFFIX,openai.azure.com
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,msn.com
+DOMAIN-SUFFIX,msn.cn
+DOMAIN-SUFFIX,edge.microsoft.com
+DOMAIN-SUFFIX,sydney.bing.com
+DOMAIN-SUFFIX,copilot.microsoft365.com
+DOMAIN-SUFFIX,edgeservices.bing.com.edgekey.net
+DOMAIN-SUFFIX,skype.com
+DOMAIN-SUFFIX,skypeassets.com
+DOMAIN,chat.bing.com
+DOMAIN,edgeservices.bing.com
+DOMAIN,api.bing.microsoft.com
