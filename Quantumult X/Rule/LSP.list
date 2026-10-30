@@ -1,0 +1,6 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# > 𝑳𝑺𝑷网站规则
+# 𝒎𝒊𝒔𝒔𝒂𝒗
+host-suffix,missav123.com,proxy
+# > 𝑷𝒐𝒓𝒏𝒉𝒖𝒃规则
+host-suffix,pornhub.com,proxy

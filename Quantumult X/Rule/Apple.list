@@ -1,0 +1,22 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Apple: 20
+host-suffix,apple.com,proxy
+host-suffix,apple.cn,proxy
+host-suffix,apple.com.cn,proxy
+host-suffix,icloud.com,proxy
+host-suffix,icloud.cn,proxy
+host-suffix,icloud-content.com,proxy
+host-suffix,icloud-content.com.cn,proxy
+host-suffix,apple-cloudkit.com,proxy
+host-suffix,cdn-apple.com,proxy
+host-suffix,aaplimg.com,proxy
+host-suffix,appleimg.com,proxy
+host-suffix,mzstatic.com,proxy
+host-suffix,me.com,proxy
+host-suffix,apple-dns.net,proxy
+host-suffix,appstore.com,proxy
+host-suffix,appsto.re,proxy
+host-suffix,swift.org,proxy
+host,itunes.apple.com,proxy
+ip-cidr,17.0.0.0/8,proxy
+ip6-cidr,2620:149::/32,proxy

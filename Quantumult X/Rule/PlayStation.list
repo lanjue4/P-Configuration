@@ -1,0 +1,32 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# PlayStation: 30
+host-suffix,playstation.com,proxy
+host-suffix,playstation.net,proxy
+host-suffix,playstation.org,proxy
+host-suffix,playstationnetwork.com,proxy
+host-suffix,sonyentertainmentnetwork.com,proxy
+host-suffix,sonyentertainmentnetwork.net,proxy
+host-suffix,psn.com,proxy
+host-suffix,scea.com,proxy
+host-suffix,scei.co.jp,proxy
+host-suffix,scee.com,proxy
+host-suffix,scestatic.com,proxy
+host-suffix,sony.com,proxy
+host-suffix,sony.net,proxy
+host-suffix,api.playstation.com,proxy
+host-suffix,store.playstation.com,proxy
+host-suffix,my.playstation.com,proxy
+host-suffix,id.sonyentertainmentnetwork.com,proxy
+host-suffix,account.sony.com,proxy
+host-suffix,accounts.np.ac.playstation.net,proxy
+host-suffix,np.community.playstation.net,proxy
+host-suffix,np.playstation.net,proxy
+host-suffix,dl.playstation.net,proxy
+host-suffix,gs2.ww.prod.dl.playstation.net,proxy
+host-suffix,remoteplay.dl.playstation.net,proxy
+host-suffix,playstationlivearea.com,proxy
+host-suffix,playstationmusic.com,proxy
+host-suffix,playstationvideo.com,proxy
+host-keyword,playstation,proxy
+host-keyword,sonyentertainmentnetwork,proxy
+host-keyword,psn,proxy

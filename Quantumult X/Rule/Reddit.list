@@ -1,0 +1,13 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Reddit: 11
+host-suffix,reddit.com,proxy
+host-suffix,redditmedia.com,proxy
+host-suffix,redditstatic.com,proxy
+host-suffix,redd.it,proxy
+host-suffix,redditmail.com,proxy
+host-suffix,reddithelp.com,proxy
+host-suffix,redditstatus.com,proxy
+host-suffix,redditinc.com,proxy
+host-suffix,out.reddit.com,proxy
+host-keyword,reddit,proxy
+host-keyword,redditmedia,proxy

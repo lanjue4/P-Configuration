@@ -1,0 +1,10 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# AppleTV: 8
+host-keyword,itunes.apple.com,proxy
+host-suffix,tv.apple.com,proxy
+host-suffix,tv.applemusic.com,proxy
+host-suffix,aaplimg.com,proxy
+host-suffix,apple-mapkit.com,proxy
+host-suffix,hls.itunes.apple.com,proxy
+host-suffix,hls-amt.itunes.apple.com,proxy
+host-suffix,play-edge.apple.com,proxy

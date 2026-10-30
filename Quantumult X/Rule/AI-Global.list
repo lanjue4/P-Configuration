@@ -1,0 +1,75 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# 国外 AI 合集
+# 现有规则合并快照，不宣称覆盖全球全部 AI 服务。
+# 来源：AI.list
+host,bard.google.com,proxy
+host,gemini.google.com,proxy
+host,aistudio.google.com,proxy
+host,ai.google.dev,proxy
+host,notebooklm.google.com,proxy
+host,notebooklm.google,proxy
+host-suffix,generativeai.google,proxy
+host-suffix,deepmind.google,proxy
+host-suffix,deepmind.com,proxy
+host-suffix,makersuite.google.com,proxy
+host-suffix,gemini.google,proxy
+host-suffix,gemini.googleusercontent.com,proxy
+host-suffix,generativelanguage.googleapis.com,proxy
+host-suffix,proactivebackend-pa.googleapis.com,proxy
+host-suffix,waa-pa.googleapis.com,proxy
+host-suffix,alkalinetoolkit-pa.googleapis.com,proxy
+host-suffix,ai.google,proxy
+host-keyword,gemini,proxy
+host-keyword,generativeai,proxy
+host-suffix,openai.com,proxy
+host-suffix,chatgpt.com,proxy
+host-suffix,oaistatic.com,proxy
+host-suffix,oaiusercontent.com,proxy
+host-suffix,sora.com,proxy
+host-suffix,searchgpt.com,proxy
+host-suffix,auth0.com,proxy
+host-suffix,arkoselabs.com,proxy
+host-suffix,identrust.com,proxy
+host-suffix,openaiapi-site.azureedge.net,proxy
+host-suffix,intercom.io,proxy
+host-suffix,intercomcdn.com,proxy
+host-suffix,featuregates.org,proxy
+host-suffix,stripe.com,proxy
+host-suffix,claude.ai,proxy
+host-suffix,anthropic.com,proxy
+host-suffix,anthropic.cn,proxy
+host-suffix,claudeusercontent.com,proxy
+host-suffix,claude-files.com,proxy
+host-suffix,copilot.microsoft.com,proxy
+host-suffix,bingimages.microsoft.com,proxy
+host-suffix,ai.microsoft.com,proxy
+host-suffix,cdn.openai.com,proxy
+host-suffix,openai.azure.com,proxy
+host-suffix,openaicom.imgix.net,proxy
+host-suffix,azureedge.net,proxy
+host-suffix,msn.com,proxy
+host-suffix,msn.cn,proxy
+host-suffix,edge.microsoft.com,proxy
+host-suffix,sydney.bing.com,proxy
+host-suffix,copilot.microsoft365.com,proxy
+host-suffix,edgeservices.bing.com.edgekey.net,proxy
+host-suffix,skype.com,proxy
+host-suffix,skypeassets.com,proxy
+host,chat.bing.com,proxy
+host,edgeservices.bing.com,proxy
+host,api.bing.microsoft.com,proxy
+# 来源：Gemini.list
+host-suffix,googleapis.com,proxy
+host-suffix,gstatic.com,proxy
+host-suffix,googleusercontent.com,proxy
+# 来源：Grok.list
+host-suffix,grok.com,proxy
+host-suffix,x-ai.com,proxy
+host-suffix,xai.com,proxy
+host-keyword,grok-api,proxy
+host,api.grok.com,proxy
+host,assets.grok.com,proxy
+# Google Flow：来自用户目标及此前提供的配置；需实机请求确认完整依赖
+host,flow.google.com,proxy
+host,labs.google,proxy
+host,aisandbox-pa.googleapis.com,proxy

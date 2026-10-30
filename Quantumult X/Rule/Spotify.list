@@ -1,0 +1,17 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Spotify：15
+host-suffix,spotify.com,proxy
+host-suffix,scdn.co,proxy
+host-suffix,spoti.fi,proxy
+host-suffix,spotifycdn.com,proxy
+host-suffix,spotifycdn.net,proxy
+host-suffix,pscdn.co,proxy
+host-suffix,spotify.link,proxy
+host-suffix,spotifycodes.com,proxy
+host-suffix,spotify-everywhere.com,proxy
+host-suffix,byspotify.com,proxy
+host-suffix,lifeatspotify.com,proxy
+host-keyword,spotify,proxy
+host-keyword,audio-ak-spotify,proxy
+host-keyword,heads-ak-spotify,proxy
+host-suffix,spotify.map.fastly.net,proxy

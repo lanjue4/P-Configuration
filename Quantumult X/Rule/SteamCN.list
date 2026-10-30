@@ -1,0 +1,17 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# SteamCN: 15
+host-suffix,steamchina.com,proxy
+host-suffix,steamchina.cn,proxy
+host-suffix,steampp.net,proxy
+host-suffix,steamcontent.com,proxy
+host-suffix,cm.steampowered.com,proxy
+host-suffix,steamserver.net,proxy
+host-suffix,wmsjsteam.com,proxy
+host-suffix,steampowered.com,proxy
+host-suffix,steamstatic.com,proxy
+host-suffix,steamcdn-a.akamaihd.net,proxy
+host-suffix,steamcommunity.com,proxy
+host-suffix,steam-chat.com,proxy
+host-keyword,steamchina,proxy
+host-keyword,steamcontent,proxy
+host-keyword,steampowered,proxy

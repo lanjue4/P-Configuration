@@ -1,0 +1,52 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# 国内 AI 合集
+# 现有规则合并快照，不宣称覆盖全球全部 AI 服务。
+# 来源：Deepseek.list
+host-keyword,deepseek,proxy
+host-suffix,deepseek.com,proxy
+host-suffix,deepseek.ai,proxy
+host-suffix,deepseek-static.com,proxy
+host-suffix,bytegecko.com,proxy
+host-suffix,volces.com,proxy
+host-suffix,volcengine.com,proxy
+host,chat.gecko-pas.com,proxy
+# 来源：Doubao.list
+host-keyword,doubao,proxy
+host-suffix,doubao.com,proxy
+host-suffix,doubaoai.com,proxy
+host-suffix,doubao-dev.com,proxy
+host-suffix,doubaocdn.com,proxy
+host-suffix,doubaozhidao.com,proxy
+host-suffix,volccdn.com,proxy
+host-suffix,volcengineapi.com,proxy
+host-suffix,volcengine.cn,proxy
+host-suffix,rtc.volcengine.com,proxy
+host-suffix,rtc-cn.volcengine.com,proxy
+host-suffix,rtcs.volcengine.com,proxy
+host-suffix,rtc-live.volcengine.com,proxy
+host-suffix,turn.volcengine.com,proxy
+host-suffix,stun.volcengine.com,proxy
+host-suffix,turn-cn.volcengine.com,proxy
+host-suffix,turn.volces.com,proxy
+host-suffix,stun.volces.com,proxy
+host-suffix,signaling.volcengine.com,proxy
+host-keyword,rtc-vcloud,proxy
+host-keyword,volc-rtc,proxy
+host-keyword,volcengine-rtc,proxy
+host-suffix,byteoversea.com,proxy
+host-suffix,ibyteimg.com,proxy
+host-suffix,snssdk.com,proxy
+host-suffix,bytedance.com,proxy
+host-suffix,api.doubao.com,proxy
+host-suffix,ark.cn-beijing.volces.com,proxy
+host-suffix,ark.volcengine.com,proxy
+ip-asn,138692,proxy
+ip-asn,204454,proxy
+ip-asn,134709,proxy
+ip-asn,139070,proxy
+# 补齐 ChinaDIRECT 中已有的 DeepSeek 条目；ChinaDIRECT 原文不变
+host-suffix,deepseek.cn,proxy
+host,chat.deepseek.com,proxy
+host,api.deepseek.com,proxy
+host,auth.deepseek.com,proxy
+ip-asn,134763,proxy

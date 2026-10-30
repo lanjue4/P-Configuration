@@ -1,0 +1,21 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# YouTube: 17
+host-suffix,youtube.com,proxy
+host-suffix,youtu.be,proxy
+host-suffix,yt.be,proxy
+host-suffix,googlevideo.com,proxy
+host-suffix,ytimg.com,proxy
+host-suffix,youtube-nocookie.com,proxy
+host-suffix,youtubeeducation.com,proxy
+host-suffix,withyoutube.com,proxy
+host-suffix,ytimg.l.google.com,proxy
+host,youtubei.googleapis.com,proxy
+host,youtubeembeddedplayer.googleapis.com,proxy
+host,youtube-ui.l.google.com,proxy
+host-suffix,ggpht.com,proxy
+host-keyword,youtube,proxy
+host-keyword,googlevideo,proxy
+host-keyword,-youtube-,proxy
+ip-asn,19527,proxy
+ip-asn,36040,proxy
+ip-asn,43515,proxy

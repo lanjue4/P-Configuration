@@ -1,0 +1,14 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Pixiv: 12
+host-suffix,pixiv.net,proxy
+host-suffix,pixiv.me,proxy
+host-suffix,pximg.net,proxy
+host-suffix,pixiv.org,proxy
+host-suffix,pixiv.co.jp,proxy
+host-suffix,pixiv.net.co,proxy
+host-suffix,fanbox.cc,proxy
+host-suffix,booth.pm,proxy
+host-suffix,comic-art.com,proxy
+host-suffix,sketch.pixiv.net,proxy
+host-keyword,pixiv,proxy
+host-keyword,pximg,proxy

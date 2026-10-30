@@ -1,0 +1,15 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+host-suffix,local,proxy
+ip-cidr,0.0.0.0/8,proxy
+ip-cidr,10.0.0.0/8,proxy
+ip-cidr,100.64.0.0/10,proxy
+ip-cidr,127.0.0.0/8,proxy
+ip-cidr,172.16.0.0/12,proxy
+ip-cidr,169.254.0.0/16,proxy
+ip-cidr,192.0.0.0/24,proxy
+ip-cidr,192.0.2.0/24,proxy
+ip-cidr,192.168.0.0/16,proxy
+ip-cidr,224.0.0.0/4,proxy
+ip6-cidr,::1/128,proxy
+ip6-cidr,fc00::/7,proxy
+ip6-cidr,fe80::/10,proxy

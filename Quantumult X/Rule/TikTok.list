@@ -1,0 +1,25 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# TikTok: 23
+host-suffix,tiktok.com,proxy
+host-suffix,tiktokv.com,proxy
+host-suffix,musical.ly,proxy
+host-suffix,byteoversea.com,proxy
+host-suffix,bytegecko.com,proxy
+host-suffix,bytekv.com,proxy
+host-suffix,tiktokshop.com,proxy
+host-suffix,tiktokcdn.com,proxy
+host-suffix,ttwstatic.com,proxy
+host-suffix,ibyteimg.com,proxy
+host-suffix,ibytedtos.com,proxy
+host-suffix,tiktokwdata.com,proxy
+host-suffix,tiktokv.us,proxy
+host-suffix,tiktokinit.com,proxy
+host-suffix,tiktokorg.com,proxy
+host-suffix,byteoversea.net,proxy
+host-suffix,byteicdn.com,proxy
+host-suffix,tik-tokapi.com,proxy
+host-suffix,ttplugins.com,proxy
+host-suffix,ttlivecdn.com,proxy
+host-keyword,tiktokcdn-com,proxy
+host-keyword,-tiktokcdn-,proxy
+host-keyword,tiktok,proxy

@@ -1,0 +1,14 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Twitch: 12
+host-suffix,twitch.tv,proxy
+host-suffix,ttvnw.net,proxy
+host-suffix,jtvnw.net,proxy
+host-suffix,twitchcdn.net,proxy
+host-suffix,twitchthumbs.com,proxy
+host-suffix,twitchsvc.net,proxy
+host-suffix,ext-twitch.tv,proxy
+host-suffix,baron.twitch.tv,proxy
+host-suffix,chatterino.com,proxy
+host-keyword,twitch,proxy
+host-keyword,ttvnw,proxy
+host-keyword,jtvnw,proxy

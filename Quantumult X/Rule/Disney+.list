@@ -1,0 +1,18 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# DisneyPlus: 16
+host-suffix,disneyplus.com,proxy
+host-suffix,disney-plus.net,proxy
+host-suffix,disneymedia.com,proxy
+host-suffix,dssott.com,proxy
+host-suffix,bamgrid.com,proxy
+host-suffix,disney.com,proxy
+host-suffix,disneyplus.co,proxy
+host-suffix,disney-portal.my.oneid.digicert.com,proxy
+host-suffix,disneystreaming.com,proxy
+host-suffix,cdn.registerdisney.go.com,proxy
+host-suffix,execute-api.us-east-1.amazonaws.com,proxy
+host,js-agent.newrelic.com,proxy
+host,disney.connections.mparticle.com,proxy
+host,disney-plus.enonic.cloud,proxy
+host,watson.telemetry.disney.com,proxy
+host,adobedtm.com,proxy

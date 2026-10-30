@@ -1,0 +1,9 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Hupu: 7
+host-keyword,hupu,proxy
+host-suffix,hoopchina.com,proxy
+host-suffix,kanqiu.com,proxy
+host-suffix,hpstatic.cn,proxy
+host-suffix,hupustatic.com,proxy
+host-suffix,shihuo.cn,proxy
+host-suffix,shihuoapi.com,proxy

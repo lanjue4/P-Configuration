@@ -1,0 +1,18 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Steam: 16
+host-suffix,steampowered.com,proxy
+host-suffix,steamcommunity.com,proxy
+host-suffix,steamstatic.com,proxy
+host-suffix,steamusercontent.com,proxy
+host-suffix,steam-chat.com,proxy
+host-suffix,steamserver.net,proxy
+host-suffix,steamcontent.com,proxy
+host-suffix,steamdeck.com,proxy
+host-suffix,steamgames.com,proxy
+host-suffix,valvesoftware.com,proxy
+host-suffix,valvecorp.com,proxy
+host-suffix,underlords.com,proxy
+host-suffix,artifacts.com,proxy
+host-keyword,steam,proxy
+host-keyword,valve,proxy
+host,valve.com,proxy

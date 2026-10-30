@@ -1,0 +1,5 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Douban: 3
+host-suffix,douban.com,proxy
+host-suffix,doubanio.com,proxy
+host-suffix,douban.fm,proxy

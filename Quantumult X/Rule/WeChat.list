@@ -1,0 +1,26 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# WeChat: 24
+host-suffix,weixin.com,proxy
+host-suffix,wechat.com,proxy
+host-suffix,tencent.com,proxy
+host-suffix,qlogo.cn,proxy
+host-suffix,qpic.cn,proxy
+host-suffix,servicewechat.com,proxy
+host-suffix,weixinbridge.com,proxy
+host-suffix,wechatlegal.net,proxy
+host-suffix,wechatpay.com,proxy
+host-suffix,tenpay.com,proxy
+host-suffix,qq.com,proxy
+host-suffix,gtimg.com,proxy
+host-suffix,gtimg.cn,proxy
+host-suffix,myqcloud.com,proxy
+host-suffix,wx.qq.com,proxy
+host-suffix,wxs.qq.com,proxy
+host-suffix,weixinimg.jaeapp.com,proxy
+host-keyword,wechat,proxy
+host-keyword,weixin,proxy
+host-keyword,tencent,proxy
+ip-asn,132203,proxy
+ip-asn,132591,proxy
+ip-asn,45090,proxy
+ip-asn,58543,proxy

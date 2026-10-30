@@ -1,0 +1,14 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# 小红书：12
+host-suffix,xiaohongshu.com,proxy
+host-suffix,xhscdn.com,proxy
+host-suffix,xhslink.com,proxy
+host-suffix,xhs.cn,proxy
+host-suffix,rednote.com,proxy
+host-suffix,rednote.com.cn,proxy
+host,edith.xiaohongshu.com,proxy
+host,fp.xiaohongshu.com,proxy
+host,sec.xiaohongshu.com,proxy
+host,gslb.xiaohongshu.com,proxy
+host,crash.xiaohongshu.com,proxy
+host,spider-tracker.xiaohongshu.com,proxy

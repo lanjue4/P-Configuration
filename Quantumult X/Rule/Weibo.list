@@ -1,0 +1,17 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Weibo: 15
+host-suffix,weibo.cn,proxy
+host-suffix,weibo.com,proxy
+host-suffix,weibocdn.com,proxy
+host-suffix,weibocdn.cn,proxy
+host-suffix,sinaimg.cn,proxy
+host-suffix,sinajs.cn,proxy
+host-suffix,sina.com.cn,proxy
+host-suffix,sina.cn,proxy
+host-suffix,sina.com,proxy
+host-suffix,sinacn.com,proxy
+host-suffix,miaopai.com,proxy
+host-suffix,xiaokaxiu.com,proxy
+host-keyword,weibo,proxy
+host-keyword,sinaimg,proxy
+ip-asn,23724,proxy

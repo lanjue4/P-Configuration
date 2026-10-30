@@ -1,0 +1,11 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Speedtest: 9
+host-suffix,speedtest.net,proxy
+host-suffix,ooklaserver.net,proxy
+host-suffix,ookla.com,proxy
+host-suffix,speedtestcustom.com,proxy
+host-suffix,downdetector.com,proxy
+host-suffix,downdetector.com.br,proxy
+host-suffix,downdetector.co.uk,proxy
+host-keyword,speedtest,proxy
+host-keyword,ookla,proxy

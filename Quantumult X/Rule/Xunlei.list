@@ -1,0 +1,16 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Xunlei: 14
+host-suffix,xunlei.com,proxy
+host-suffix,thunderurl.com,proxy
+host-suffix,sandai.net,proxy
+host-suffix,00881.net,proxy
+host-suffix,kankan.com,proxy
+host-suffix,xlpan.com,proxy
+host-suffix,xunlei.net,proxy
+host-suffix,sjxl.cn,proxy
+host-suffix,lixian.vip,proxy
+host-suffix,xycdn.com,proxy
+host-suffix,onethingpcs.com,proxy
+host-keyword,xunlei,proxy
+host-keyword,thunder,proxy
+ip-asn,135905,proxy

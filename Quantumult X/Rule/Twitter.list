@@ -1,0 +1,16 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Twitter-X: 14
+host-suffix,x.com,proxy
+host-suffix,twitter.com,proxy
+host-suffix,twimg.com,proxy
+host-suffix,t.co,proxy
+host-suffix,grok.com,proxy
+host-suffix,twvid.com,proxy
+host-suffix,video.twimg.com,proxy
+host-suffix,abs.twimg.com,proxy
+ip-cidr,104.244.42.0/21,proxy
+ip-cidr,192.133.76.0/22,proxy
+ip-cidr,199.16.156.0/22,proxy
+ip-cidr,199.59.148.0/22,proxy
+ip-asn,13414,proxy
+ip-asn,35995,proxy

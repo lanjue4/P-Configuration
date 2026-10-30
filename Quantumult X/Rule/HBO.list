@@ -1,0 +1,14 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Max: 12
+host-suffix,max.com,proxy
+host-suffix,hbomax.com,proxy
+host-suffix,hbogo.com,proxy
+host-suffix,hbo.com,proxy
+host-suffix,hbomaxcdn.com,proxy
+host-suffix,hboasia.com,proxy
+host-suffix,hbogoasia.com,proxy
+host-suffix,hbogoasia.hk,proxy
+host-suffix,discomax.com,proxy
+host-suffix,wbd.com,proxy
+host-suffix,execute-api.us-east-1.amazonaws.com,proxy
+host,beam-images.warnermediacdn.com,proxy

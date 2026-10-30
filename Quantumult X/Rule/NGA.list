@@ -1,0 +1,14 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# NGA: 12
+host-suffix,nga.cn,proxy
+host-suffix,ngabbs.com,proxy
+host-suffix,178.com,proxy
+host-suffix,nga.178.com,proxy
+host-suffix,ngacn.cc,proxy
+host-suffix,biglobe.ne.jp,proxy
+host-suffix,pic.backblazeb2.com,proxy
+host-suffix,img9.nga.178.com,proxy
+host-keyword,ngabbs,proxy
+host-keyword,ngacn,proxy
+ip-asn,135904,proxy
+ip-asn,4808,proxy

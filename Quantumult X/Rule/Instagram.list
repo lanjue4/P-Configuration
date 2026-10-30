@@ -1,0 +1,8 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Instagram: 6
+host-suffix,instagram.com,proxy
+host-suffix,cdninstagram.com,proxy
+host-suffix,instagr.am,proxy
+host-suffix,instagr.com,proxy
+host-suffix,fbcdn.net,proxy
+host-keyword,instagram,proxy

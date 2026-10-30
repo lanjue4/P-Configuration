@@ -1,0 +1,29 @@
+# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
+# Google-Base: 27
+host-suffix,google.com,proxy
+host-suffix,googleapis.com,proxy
+host-suffix,gstatic.com,proxy
+host-suffix,googleusercontent.com,proxy
+host-suffix,googleusercontent.cn,proxy
+host-suffix,ggpht.com,proxy
+host-suffix,recaptcha.net,proxy
+host-suffix,recaptcha-cn.net,proxy
+host-suffix,chrome.com,proxy
+host-suffix,googledrive.com,proxy
+host-suffix,firebaseio.com,proxy
+host-suffix,firebaseapi.com,proxy
+host-suffix,googlezip.net,proxy
+host-suffix,googlesyndication.com,proxy
+host-suffix,doubleclick.net,proxy
+host-suffix,google-analytics.com,proxy
+host-suffix,google-analytics-cn.com,proxy
+host-suffix,googletagmanager.com,proxy
+host-suffix,googleoptimize.com,proxy
+host-suffix,app-measurement.com,proxy
+host-suffix,gvt0.com,proxy
+host-suffix,gvt1.com,proxy
+host-suffix,gvt2.com,proxy
+host-suffix,gvt3.com,proxy
+host-suffix,1e100.net,proxy
+host-suffix,g.co,proxy
+host-suffix,withgoogle.com,proxy
