@@ -1,9 +1,0 @@
-# Quantumult X 通用规则集；导入时用 force-policy 指定实际策略。
-# AGE动漫：7
-host-suffix,agedm.io,proxy
-host-suffix,age.tv,proxy
-host-suffix,agefans.com,proxy
-host-suffix,agedm.com,proxy
-host-suffix,agedm.org,proxy
-host,ageapi.omwjhz.com,proxy
-host-keyword,agedm,proxy
