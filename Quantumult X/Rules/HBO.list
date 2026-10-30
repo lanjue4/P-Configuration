@@ -1,0 +1,15 @@
+# Quantumult X 原生分流规则；默认策略：HBO
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Max: 12
+host-suffix,max.com,HBO
+host-suffix,hbomax.com,HBO
+host-suffix,hbogo.com,HBO
+host-suffix,hbo.com,HBO
+host-suffix,hbomaxcdn.com,HBO
+host-suffix,hboasia.com,HBO
+host-suffix,hbogoasia.com,HBO
+host-suffix,hbogoasia.hk,HBO
+host-suffix,discomax.com,HBO
+host-suffix,wbd.com,HBO
+host-suffix,execute-api.us-east-1.amazonaws.com,HBO
+host,beam-images.warnermediacdn.com,HBO

@@ -1,0 +1,18 @@
+# Quantumult X 原生分流规则；默认策略：SteamCN
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# SteamCN: 15
+host-suffix,steamchina.com,SteamCN
+host-suffix,steamchina.cn,SteamCN
+host-suffix,steampp.net,SteamCN
+host-suffix,steamcontent.com,SteamCN
+host-suffix,cm.steampowered.com,SteamCN
+host-suffix,steamserver.net,SteamCN
+host-suffix,wmsjsteam.com,SteamCN
+host-suffix,steampowered.com,SteamCN
+host-suffix,steamstatic.com,SteamCN
+host-suffix,steamcdn-a.akamaihd.net,SteamCN
+host-suffix,steamcommunity.com,SteamCN
+host-suffix,steam-chat.com,SteamCN
+host-keyword,steamchina,SteamCN
+host-keyword,steamcontent,SteamCN
+host-keyword,steampowered,SteamCN

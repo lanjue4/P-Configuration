@@ -1,0 +1,18 @@
+# Quantumult X 原生分流规则；默认策略：Spotify
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Spotify：15
+host-suffix,spotify.com,Spotify
+host-suffix,scdn.co,Spotify
+host-suffix,spoti.fi,Spotify
+host-suffix,spotifycdn.com,Spotify
+host-suffix,spotifycdn.net,Spotify
+host-suffix,pscdn.co,Spotify
+host-suffix,spotify.link,Spotify
+host-suffix,spotifycodes.com,Spotify
+host-suffix,spotify-everywhere.com,Spotify
+host-suffix,byspotify.com,Spotify
+host-suffix,lifeatspotify.com,Spotify
+host-keyword,spotify,Spotify
+host-keyword,audio-ak-spotify,Spotify
+host-keyword,heads-ak-spotify,Spotify
+host-suffix,spotify.map.fastly.net,Spotify

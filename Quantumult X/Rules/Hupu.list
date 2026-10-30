@@ -1,0 +1,10 @@
+# Quantumult X 原生分流规则；默认策略：Hupu
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Hupu: 7
+host-keyword,hupu,Hupu
+host-suffix,hoopchina.com,Hupu
+host-suffix,kanqiu.com,Hupu
+host-suffix,hpstatic.cn,Hupu
+host-suffix,hupustatic.com,Hupu
+host-suffix,shihuo.cn,Hupu
+host-suffix,shihuoapi.com,Hupu

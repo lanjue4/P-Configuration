@@ -1,0 +1,12 @@
+# Quantumult X 原生分流规则；默认策略：Speedtest
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Speedtest: 9
+host-suffix,speedtest.net,Speedtest
+host-suffix,ooklaserver.net,Speedtest
+host-suffix,ookla.com,Speedtest
+host-suffix,speedtestcustom.com,Speedtest
+host-suffix,downdetector.com,Speedtest
+host-suffix,downdetector.com.br,Speedtest
+host-suffix,downdetector.co.uk,Speedtest
+host-keyword,speedtest,Speedtest
+host-keyword,ookla,Speedtest

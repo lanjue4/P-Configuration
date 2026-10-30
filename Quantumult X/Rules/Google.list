@@ -1,0 +1,30 @@
+# Quantumult X 原生分流规则；默认策略：Google
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Google-Base: 27
+host-suffix,google.com,Google
+host-suffix,googleapis.com,Google
+host-suffix,gstatic.com,Google
+host-suffix,googleusercontent.com,Google
+host-suffix,googleusercontent.cn,Google
+host-suffix,ggpht.com,Google
+host-suffix,recaptcha.net,Google
+host-suffix,recaptcha-cn.net,Google
+host-suffix,chrome.com,Google
+host-suffix,googledrive.com,Google
+host-suffix,firebaseio.com,Google
+host-suffix,firebaseapi.com,Google
+host-suffix,googlezip.net,Google
+host-suffix,googlesyndication.com,Google
+host-suffix,doubleclick.net,Google
+host-suffix,google-analytics.com,Google
+host-suffix,google-analytics-cn.com,Google
+host-suffix,googletagmanager.com,Google
+host-suffix,googleoptimize.com,Google
+host-suffix,app-measurement.com,Google
+host-suffix,gvt0.com,Google
+host-suffix,gvt1.com,Google
+host-suffix,gvt2.com,Google
+host-suffix,gvt3.com,Google
+host-suffix,1e100.net,Google
+host-suffix,g.co,Google
+host-suffix,withgoogle.com,Google

@@ -1,0 +1,64 @@
+# Quantumult X 原生分流规则；默认策略：YouXiPingTai
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Steam: 16
+host-suffix,steampowered.com,YouXiPingTai
+host-suffix,steamcommunity.com,YouXiPingTai
+host-suffix,steamstatic.com,YouXiPingTai
+host-suffix,steamusercontent.com,YouXiPingTai
+host-suffix,steam-chat.com,YouXiPingTai
+host-suffix,steamserver.net,YouXiPingTai
+host-suffix,steamcontent.com,YouXiPingTai
+host-suffix,steamdeck.com,YouXiPingTai
+host-suffix,steamgames.com,YouXiPingTai
+host-suffix,valvesoftware.com,YouXiPingTai
+host-suffix,valvecorp.com,YouXiPingTai
+host-suffix,underlords.com,YouXiPingTai
+host-suffix,artifacts.com,YouXiPingTai
+host-keyword,steam,YouXiPingTai
+host-keyword,valve,YouXiPingTai
+host,valve.com,YouXiPingTai
+# EpicGames: 13
+host-suffix,epicgames.com,YouXiPingTai
+host-suffix,unrealengine.com,YouXiPingTai
+host-suffix,epicgames.dev,YouXiPingTai
+host-suffix,epiconlineimages.com,YouXiPingTai
+host-suffix,fortnite.com,YouXiPingTai
+host-suffix,helpshift.com,YouXiPingTai
+host-suffix,paragon.com,YouXiPingTai
+host-suffix,playparagon.com,YouXiPingTai
+host-suffix,shadowcomplex.com,YouXiPingTai
+host-suffix,spyjinx.com,YouXiPingTai
+host-suffix,unrealtournament.com,YouXiPingTai
+host-suffix,entitlements.com,YouXiPingTai
+host,help.epicgames.com,YouXiPingTai
+# PlayStation: 30
+host-suffix,playstation.com,YouXiPingTai
+host-suffix,playstation.net,YouXiPingTai
+host-suffix,playstation.org,YouXiPingTai
+host-suffix,playstationnetwork.com,YouXiPingTai
+host-suffix,sonyentertainmentnetwork.com,YouXiPingTai
+host-suffix,sonyentertainmentnetwork.net,YouXiPingTai
+host-suffix,psn.com,YouXiPingTai
+host-suffix,scea.com,YouXiPingTai
+host-suffix,scei.co.jp,YouXiPingTai
+host-suffix,scee.com,YouXiPingTai
+host-suffix,scestatic.com,YouXiPingTai
+host-suffix,sony.com,YouXiPingTai
+host-suffix,sony.net,YouXiPingTai
+host-suffix,api.playstation.com,YouXiPingTai
+host-suffix,store.playstation.com,YouXiPingTai
+host-suffix,my.playstation.com,YouXiPingTai
+host-suffix,id.sonyentertainmentnetwork.com,YouXiPingTai
+host-suffix,account.sony.com,YouXiPingTai
+host-suffix,accounts.np.ac.playstation.net,YouXiPingTai
+host-suffix,np.community.playstation.net,YouXiPingTai
+host-suffix,np.playstation.net,YouXiPingTai
+host-suffix,dl.playstation.net,YouXiPingTai
+host-suffix,gs2.ww.prod.dl.playstation.net,YouXiPingTai
+host-suffix,remoteplay.dl.playstation.net,YouXiPingTai
+host-suffix,playstationlivearea.com,YouXiPingTai
+host-suffix,playstationmusic.com,YouXiPingTai
+host-suffix,playstationvideo.com,YouXiPingTai
+host-keyword,playstation,YouXiPingTai
+host-keyword,sonyentertainmentnetwork,YouXiPingTai
+host-keyword,psn,YouXiPingTai

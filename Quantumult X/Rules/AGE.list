@@ -1,0 +1,10 @@
+# Quantumult X 原生分流规则；默认策略：AGE
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# AGE动漫：7
+host-suffix,agedm.io,AGE
+host-suffix,age.tv,AGE
+host-suffix,agefans.com,AGE
+host-suffix,agedm.com,AGE
+host-suffix,agedm.org,AGE
+host,ageapi.omwjhz.com,AGE
+host-keyword,agedm,AGE

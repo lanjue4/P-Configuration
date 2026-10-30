@@ -1,0 +1,62 @@
+# Quantumult X 原生分流规则；默认策略：AI
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Google-Gemini: 18
+host,bard.google.com,AI
+host,gemini.google.com,AI
+host,aistudio.google.com,AI
+host,ai.google.dev,AI
+host,notebooklm.google.com,AI
+host,notebooklm.google,AI
+host-suffix,generativeai.google,AI
+host-suffix,deepmind.google,AI
+host-suffix,deepmind.com,AI
+host-suffix,makersuite.google.com,AI
+host-suffix,gemini.google,AI
+host-suffix,gemini.googleusercontent.com,AI
+host-suffix,generativelanguage.googleapis.com,AI
+host-suffix,proactivebackend-pa.googleapis.com,AI
+host-suffix,waa-pa.googleapis.com,AI
+host-suffix,alkalinetoolkit-pa.googleapis.com,AI
+host-suffix,ai.google,AI
+host-keyword,gemini,AI
+host-keyword,generativeai,AI
+# OpenAI: 14
+host-suffix,openai.com,AI
+host-suffix,chatgpt.com,AI
+host-suffix,oaistatic.com,AI
+host-suffix,oaiusercontent.com,AI
+host-suffix,sora.com,AI
+host-suffix,searchgpt.com,AI
+host-suffix,auth0.com,AI
+host-suffix,arkoselabs.com,AI
+host-suffix,identrust.com,AI
+host-suffix,openaiapi-site.azureedge.net,AI
+host-suffix,intercom.io,AI
+host-suffix,intercomcdn.com,AI
+host-suffix,featuregates.org,AI
+host-suffix,stripe.com,AI
+# Claude: 5
+host-suffix,claude.ai,AI
+host-suffix,anthropic.com,AI
+host-suffix,anthropic.cn,AI
+host-suffix,claudeusercontent.com,AI
+host-suffix,claude-files.com,AI
+# Microsoft-Copilot: 18
+host-suffix,copilot.microsoft.com,AI
+host-suffix,bingimages.microsoft.com,AI
+host-suffix,ai.microsoft.com,AI
+host-suffix,cdn.openai.com,AI
+host-suffix,openai.azure.com,AI
+host-suffix,openaicom.imgix.net,AI
+host-suffix,azureedge.net,AI
+host-suffix,msn.com,AI
+host-suffix,msn.cn,AI
+host-suffix,edge.microsoft.com,AI
+host-suffix,sydney.bing.com,AI
+host-suffix,copilot.microsoft365.com,AI
+host-suffix,edgeservices.bing.com.edgekey.net,AI
+host-suffix,skype.com,AI
+host-suffix,skypeassets.com,AI
+host,chat.bing.com,AI
+host,edgeservices.bing.com,AI
+host,api.bing.microsoft.com,AI

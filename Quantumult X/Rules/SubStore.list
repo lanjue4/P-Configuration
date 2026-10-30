@@ -1,0 +1,22 @@
+# Quantumult X 原生分流规则；默认策略：SubStore
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Sub-Store: 19
+host-suffix,substore.local,SubStore
+host-suffix,local,SubStore
+host,localhost,SubStore
+host-keyword,sub-store,SubStore
+host-keyword,substore,SubStore
+ip-cidr,0.0.0.0/8,SubStore
+ip-cidr,10.0.0.0/8,SubStore
+ip-cidr,100.64.0.0/10,SubStore
+ip-cidr,127.0.0.0/8,SubStore
+ip-cidr,169.254.0.0/16,SubStore
+ip-cidr,172.16.0.0/12,SubStore
+ip-cidr,192.0.0.0/24,SubStore
+ip-cidr,192.0.2.0/24,SubStore
+ip-cidr,192.168.0.0/16,SubStore
+ip-cidr,224.0.0.0/4,SubStore
+ip-cidr,240.0.0.0/4,SubStore
+ip6-cidr,::1/128,SubStore
+ip6-cidr,fc00::/7,SubStore
+ip6-cidr,fe80::/10,SubStore

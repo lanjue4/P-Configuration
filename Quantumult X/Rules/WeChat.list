@@ -1,0 +1,27 @@
+# Quantumult X 原生分流规则；默认策略：WeChat
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# WeChat: 24
+host-suffix,weixin.com,WeChat
+host-suffix,wechat.com,WeChat
+host-suffix,tencent.com,WeChat
+host-suffix,qlogo.cn,WeChat
+host-suffix,qpic.cn,WeChat
+host-suffix,servicewechat.com,WeChat
+host-suffix,weixinbridge.com,WeChat
+host-suffix,wechatlegal.net,WeChat
+host-suffix,wechatpay.com,WeChat
+host-suffix,tenpay.com,WeChat
+host-suffix,qq.com,WeChat
+host-suffix,gtimg.com,WeChat
+host-suffix,gtimg.cn,WeChat
+host-suffix,myqcloud.com,WeChat
+host-suffix,wx.qq.com,WeChat
+host-suffix,wxs.qq.com,WeChat
+host-suffix,weixinimg.jaeapp.com,WeChat
+host-keyword,wechat,WeChat
+host-keyword,weixin,WeChat
+host-keyword,tencent,WeChat
+ip-asn,132203,WeChat
+ip-asn,132591,WeChat
+ip-asn,45090,WeChat
+ip-asn,58543,WeChat

@@ -1,0 +1,15 @@
+# Quantumult X 原生分流规则；默认策略：NGA
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# NGA: 12
+host-suffix,nga.cn,NGA
+host-suffix,ngabbs.com,NGA
+host-suffix,178.com,NGA
+host-suffix,nga.178.com,NGA
+host-suffix,ngacn.cc,NGA
+host-suffix,biglobe.ne.jp,NGA
+host-suffix,pic.backblazeb2.com,NGA
+host-suffix,img9.nga.178.com,NGA
+host-keyword,ngabbs,NGA
+host-keyword,ngacn,NGA
+ip-asn,135904,NGA
+ip-asn,4808,NGA

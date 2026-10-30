@@ -1,0 +1,15 @@
+# Quantumult X 原生分流规则；默认策略：Twitch
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Twitch: 12
+host-suffix,twitch.tv,Twitch
+host-suffix,ttvnw.net,Twitch
+host-suffix,jtvnw.net,Twitch
+host-suffix,twitchcdn.net,Twitch
+host-suffix,twitchthumbs.com,Twitch
+host-suffix,twitchsvc.net,Twitch
+host-suffix,ext-twitch.tv,Twitch
+host-suffix,baron.twitch.tv,Twitch
+host-suffix,chatterino.com,Twitch
+host-keyword,twitch,Twitch
+host-keyword,ttvnw,Twitch
+host-keyword,jtvnw,Twitch

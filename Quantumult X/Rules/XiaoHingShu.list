@@ -1,0 +1,15 @@
+# Quantumult X 原生分流规则；默认策略：XiaoHingShu
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# 小红书：12
+host-suffix,xiaohongshu.com,XiaoHingShu
+host-suffix,xhscdn.com,XiaoHingShu
+host-suffix,xhslink.com,XiaoHingShu
+host-suffix,xhs.cn,XiaoHingShu
+host-suffix,rednote.com,XiaoHingShu
+host-suffix,rednote.com.cn,XiaoHingShu
+host,edith.xiaohongshu.com,XiaoHingShu
+host,fp.xiaohongshu.com,XiaoHingShu
+host,sec.xiaohongshu.com,XiaoHingShu
+host,gslb.xiaohongshu.com,XiaoHingShu
+host,crash.xiaohongshu.com,XiaoHingShu
+host,spider-tracker.xiaohongshu.com,XiaoHingShu

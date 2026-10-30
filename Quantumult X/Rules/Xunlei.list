@@ -1,0 +1,17 @@
+# Quantumult X 原生分流规则；默认策略：Xunlei
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Xunlei: 14
+host-suffix,xunlei.com,Xunlei
+host-suffix,thunderurl.com,Xunlei
+host-suffix,sandai.net,Xunlei
+host-suffix,00881.net,Xunlei
+host-suffix,kankan.com,Xunlei
+host-suffix,xlpan.com,Xunlei
+host-suffix,xunlei.net,Xunlei
+host-suffix,sjxl.cn,Xunlei
+host-suffix,lixian.vip,Xunlei
+host-suffix,xycdn.com,Xunlei
+host-suffix,onethingpcs.com,Xunlei
+host-keyword,xunlei,Xunlei
+host-keyword,thunder,Xunlei
+ip-asn,135905,Xunlei

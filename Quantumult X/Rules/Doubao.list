@@ -1,0 +1,39 @@
+# Quantumult X 原生分流规则；默认策略：Doubao
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# 豆包: 36
+host-keyword,doubao,Doubao
+host-suffix,doubao.com,Doubao
+host-suffix,doubaoai.com,Doubao
+host-suffix,doubao-dev.com,Doubao
+host-suffix,doubaocdn.com,Doubao
+host-suffix,doubaozhidao.com,Doubao
+host-suffix,volcengine.com,Doubao
+host-suffix,volces.com,Doubao
+host-suffix,volccdn.com,Doubao
+host-suffix,volcengineapi.com,Doubao
+host-suffix,volcengine.cn,Doubao
+host-suffix,rtc.volcengine.com,Doubao
+host-suffix,rtc-cn.volcengine.com,Doubao
+host-suffix,rtcs.volcengine.com,Doubao
+host-suffix,rtc-live.volcengine.com,Doubao
+host-suffix,turn.volcengine.com,Doubao
+host-suffix,stun.volcengine.com,Doubao
+host-suffix,turn-cn.volcengine.com,Doubao
+host-suffix,turn.volces.com,Doubao
+host-suffix,stun.volces.com,Doubao
+host-suffix,signaling.volcengine.com,Doubao
+host-keyword,rtc-vcloud,Doubao
+host-keyword,volc-rtc,Doubao
+host-keyword,volcengine-rtc,Doubao
+host-suffix,byteoversea.com,Doubao
+host-suffix,ibyteimg.com,Doubao
+host-suffix,bytegecko.com,Doubao
+host-suffix,snssdk.com,Doubao
+host-suffix,bytedance.com,Doubao
+host-suffix,api.doubao.com,Doubao
+host-suffix,ark.cn-beijing.volces.com,Doubao
+host-suffix,ark.volcengine.com,Doubao
+ip-asn,138692,Doubao
+ip-asn,204454,Doubao
+ip-asn,134709,Doubao
+ip-asn,139070,Doubao

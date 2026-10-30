@@ -1,0 +1,14 @@
+# Quantumult X 原生分流规则；默认策略：Reddit
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Reddit: 11
+host-suffix,reddit.com,Reddit
+host-suffix,redditmedia.com,Reddit
+host-suffix,redditstatic.com,Reddit
+host-suffix,redd.it,Reddit
+host-suffix,redditmail.com,Reddit
+host-suffix,reddithelp.com,Reddit
+host-suffix,redditstatus.com,Reddit
+host-suffix,redditinc.com,Reddit
+host-suffix,out.reddit.com,Reddit
+host-keyword,reddit,Reddit
+host-keyword,redditmedia,Reddit

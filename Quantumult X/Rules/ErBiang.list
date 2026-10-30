@@ -1,0 +1,7 @@
+# Quantumult X 原生分流规则；默认策略：ErBiang
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# 二柄: 4
+host-suffix,diiaa.com,ErBiang
+host-suffix,app-m.com,ErBiang
+host-keyword,diiaa,ErBiang
+ip-asn,136365,ErBiang

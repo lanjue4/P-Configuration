@@ -1,0 +1,18 @@
+# Quantumult X 原生分流规则；默认策略：Weibo
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Weibo: 15
+host-suffix,weibo.cn,Weibo
+host-suffix,weibo.com,Weibo
+host-suffix,weibocdn.com,Weibo
+host-suffix,weibocdn.cn,Weibo
+host-suffix,sinaimg.cn,Weibo
+host-suffix,sinajs.cn,Weibo
+host-suffix,sina.com.cn,Weibo
+host-suffix,sina.cn,Weibo
+host-suffix,sina.com,Weibo
+host-suffix,sinacn.com,Weibo
+host-suffix,miaopai.com,Weibo
+host-suffix,xiaokaxiu.com,Weibo
+host-keyword,weibo,Weibo
+host-keyword,sinaimg,Weibo
+ip-asn,23724,Weibo

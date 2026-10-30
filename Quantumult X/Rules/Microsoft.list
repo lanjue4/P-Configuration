@@ -1,0 +1,45 @@
+# Quantumult X 原生分流规则；默认策略：Microsoft
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Microsoft: 42
+host-suffix,microsoft.com,Microsoft
+host-suffix,live.com,Microsoft
+host-suffix,windows.net,Microsoft
+host-suffix,passport.net,Microsoft
+host-suffix,msauth.net,Microsoft
+host-suffix,msauthimages.net,Microsoft
+host-suffix,msftauth.net,Microsoft
+host-suffix,onedrive.com,Microsoft
+host-suffix,1drv.ms,Microsoft
+host-suffix,skydrive.lnk.to,Microsoft
+host-suffix,sharepoint.com,Microsoft
+host-suffix,sharepointonline.com,Microsoft
+host-suffix,storage.live.com,Microsoft
+host-suffix,office.com,Microsoft
+host-suffix,office.net,Microsoft
+host-suffix,office365.com,Microsoft
+host-suffix,outlook.com,Microsoft
+host-suffix,windows.com,Microsoft
+host-suffix,windowsupdate.com,Microsoft
+host-suffix,mp.microsoft.com,Microsoft
+host-suffix,sfx.ms,Microsoft
+host-suffix,msedge.net,Microsoft
+host-suffix,msftstatic.com,Microsoft
+host-suffix,aspnetcdn.com,Microsoft
+host-suffix,msecnd.net,Microsoft
+host-suffix,microsoftonline.com,Microsoft
+host-suffix,microsoftidentity.com,Microsoft
+host-suffix,msidentity.com,Microsoft
+host-suffix,msftconnecttest.com,Microsoft
+host-suffix,azure.com,Microsoft
+host-suffix,azure.net,Microsoft
+host-suffix,azureedge.net,Microsoft
+host-suffix,visualstudio.com,Microsoft
+host-suffix,microsoft-eshop.com,Microsoft
+host-suffix,skype.com,Microsoft
+host-suffix,skypeassets.com,Microsoft
+host-suffix,msn.com,Microsoft
+host-suffix,msn.cn,Microsoft
+host-suffix,bing.com,Microsoft
+host-suffix,bing.net,Microsoft
+host-suffix,bingimages.net,Microsoft
+host-suffix,edgeservices.bing.com.edgekey.net,Microsoft
