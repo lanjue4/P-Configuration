@@ -1,7 +1,0 @@
-# Grok: 6
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x-ai.com
-DOMAIN-SUFFIX,xai.com
-DOMAIN-KEYWORD,grok-api
-DOMAIN,api.grok.com
-DOMAIN,assets.grok.com
