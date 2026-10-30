@@ -1,0 +1,23 @@
+# Quantumult X 原生分流规则；默认策略：Apple
+# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
+# Apple: 20
+host-suffix,apple.com,Apple
+host-suffix,apple.cn,Apple
+host-suffix,apple.com.cn,Apple
+host-suffix,icloud.com,Apple
+host-suffix,icloud.cn,Apple
+host-suffix,icloud-content.com,Apple
+host-suffix,icloud-content.com.cn,Apple
+host-suffix,apple-cloudkit.com,Apple
+host-suffix,cdn-apple.com,Apple
+host-suffix,aaplimg.com,Apple
+host-suffix,appleimg.com,Apple
+host-suffix,mzstatic.com,Apple
+host-suffix,me.com,Apple
+host-suffix,apple-dns.net,Apple
+host-suffix,appstore.com,Apple
+host-suffix,appsto.re,Apple
+host-suffix,swift.org,Apple
+host,itunes.apple.com,Apple
+ip-cidr,17.0.0.0/8,Apple
+ip6-cidr,2620:149::/32,Apple
