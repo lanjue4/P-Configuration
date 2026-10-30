@@ -1,0 +1,6 @@
+# Loon 原生规则；导入时通过 policy 指定策略。
+# Pinterest: 4
+DOMAIN-SUFFIX,pinimg.com
+DOMAIN-SUFFIX,pinit.com
+DOMAIN-SUFFIX,pin.it
+DOMAIN-KEYWORD,pinterest

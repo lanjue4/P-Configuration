@@ -1,0 +1,13 @@
+# Loon 原生规则；导入时通过 policy 指定策略。
+# Reddit: 11
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,redditmail.com
+DOMAIN-SUFFIX,reddithelp.com
+DOMAIN-SUFFIX,redditstatus.com
+DOMAIN-SUFFIX,redditinc.com
+DOMAIN-SUFFIX,out.reddit.com
+DOMAIN-KEYWORD,reddit
+DOMAIN-KEYWORD,redditmedia

@@ -1,0 +1,6 @@
+# Loon 原生规则；导入时通过 policy 指定策略。
+# > 𝑳𝑺𝑷网站规则
+# 𝒎𝒊𝒔𝒔𝒂𝒗
+DOMAIN-SUFFIX,missav123.com
+# > 𝑷𝒐𝒓𝒏𝒉𝒖𝒃规则
+DOMAIN-SUFFIX,pornhub.com
