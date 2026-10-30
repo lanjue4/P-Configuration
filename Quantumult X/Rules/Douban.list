@@ -1,6 +1,0 @@
-# Quantumult X 原生分流规则；默认策略：Douban
-# 导入时可使用 force-policy 覆盖；保留源顺序，不做去重。
-# Douban: 3
-host-suffix,douban.com,Douban
-host-suffix,doubanio.com,Douban
-host-suffix,douban.fm,Douban
