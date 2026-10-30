@@ -1,0 +1,51 @@
+# 国内 AI 合集
+# 现有规则合并快照，不宣称覆盖全球全部 AI 服务。
+# 来源：Deepseek.list
+DOMAIN-KEYWORD,deepseek
+DOMAIN-SUFFIX,deepseek.com
+DOMAIN-SUFFIX,deepseek.ai
+DOMAIN-SUFFIX,deepseek-static.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,volces.com
+DOMAIN-SUFFIX,volcengine.com
+DOMAIN,chat.gecko-pas.com
+# 来源：Doubao.list
+DOMAIN-KEYWORD,doubao
+DOMAIN-SUFFIX,doubao.com
+DOMAIN-SUFFIX,doubaoai.com
+DOMAIN-SUFFIX,doubao-dev.com
+DOMAIN-SUFFIX,doubaocdn.com
+DOMAIN-SUFFIX,doubaozhidao.com
+DOMAIN-SUFFIX,volccdn.com
+DOMAIN-SUFFIX,volcengineapi.com
+DOMAIN-SUFFIX,volcengine.cn
+DOMAIN-SUFFIX,rtc.volcengine.com
+DOMAIN-SUFFIX,rtc-cn.volcengine.com
+DOMAIN-SUFFIX,rtcs.volcengine.com
+DOMAIN-SUFFIX,rtc-live.volcengine.com
+DOMAIN-SUFFIX,turn.volcengine.com
+DOMAIN-SUFFIX,stun.volcengine.com
+DOMAIN-SUFFIX,turn-cn.volcengine.com
+DOMAIN-SUFFIX,turn.volces.com
+DOMAIN-SUFFIX,stun.volces.com
+DOMAIN-SUFFIX,signaling.volcengine.com
+DOMAIN-KEYWORD,rtc-vcloud
+DOMAIN-KEYWORD,volc-rtc
+DOMAIN-KEYWORD,volcengine-rtc
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,bytedance.com
+DOMAIN-SUFFIX,api.doubao.com
+DOMAIN-SUFFIX,ark.cn-beijing.volces.com
+DOMAIN-SUFFIX,ark.volcengine.com
+IP-ASN,138692,no-resolve
+IP-ASN,204454,no-resolve
+IP-ASN,134709,no-resolve
+IP-ASN,139070,no-resolve
+# 补齐 ChinaDIRECT 中已有的 DeepSeek 条目；ChinaDIRECT 原文不变
+DOMAIN-SUFFIX,deepseek.cn
+DOMAIN,chat.deepseek.com
+DOMAIN,api.deepseek.com
+DOMAIN,auth.deepseek.com
+IP-ASN,134763,no-resolve
